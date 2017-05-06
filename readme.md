@@ -3,7 +3,7 @@
 + version:0.1.1
 + [bitbar][https://getbitbar.com]のプラグインです
 
-![][lib/menu.jpg]
+![](lib/menu.jpg)
 
 ## 準備
 1. bitbarを[こちら][https://github.com/matryer/bitbar/releases/latest]からダウンロードし、インストールする
