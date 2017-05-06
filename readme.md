@@ -1,12 +1,12 @@
 # IkaStalker
 + イカフレンド監視用
 + version:0.1.1
-+ [bitbar][https://getbitbar.com]のプラグインです
++ [bitbar](https://getbitbar.com)のプラグインです
 
 ![](lib/menu.jpg)
 
 ## 準備
-1. bitbarを[こちら][https://github.com/matryer/bitbar/releases/latest]からダウンロードし、インストールする
+1. bitbarを[こちら](https://github.com/matryer/bitbar/releases/latest)からダウンロードし、インストールする
 2. IkaStalkerを任意のディレクトリに展開
 3. session情報はブラウザでログインして、自分で取得する必要あり
 	1. イカリングにログインして、Cookieに入っているwag_sessionをコピー
