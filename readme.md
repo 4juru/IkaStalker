@@ -1,22 +1,29 @@
 # IkaStalker
-+ イカフレンド監視用
-+ version:0.1.1
-+ [bitbar](https://getbitbar.com)のプラグインです
+
+イカフレンド監視用ツール
+[bitbar](https://getbitbar.com)のプラグイン
 
 ![](lib/menu.jpg)
 
-## 準備
-1. bitbarを[こちら](https://github.com/matryer/bitbar/releases/latest)からダウンロードし、インストールする
-2. IkaStalkerを任意のディレクトリに展開
-3. session情報はブラウザでログインして、自分で取得する必要あり
+## Description
+* [splapi](https://splapi.fetus.jp)からステージ情報を取得し表示
+* [イカリング](https://splatoon.nintendo.net)にて表示できるフレンドのプレイ状態を取得・表示
+* 更新間隔はデフォルトで１分
+
+## Installation
+1. bitbarを[アプリ配布元](https://github.com/matryer/bitbar/releases/latest)から入手し、インストールする
+2. session情報はブラウザでログインして、自分で取得する必要あり
 	1. イカリングにログインして、Cookieに入っているwag_sessionをコピー
 	2. IkaStalker/lib/login.txtを編集
 	3. $wag_sessiond = '〇〇'の〇〇部分にコピーしたwag_sessionを貼り付け（$wag_sessiond_dummyを参考に）
 	4. IkaStalker/lib/login.txtを上書き保存
-4. bitbarを起動し、_Plugins Directory_としてIkaStalkerフォルダを指定
-5. メニューバーに_ᔦꙬᔨ-時刻_の表示が出ていれば起動成功(⚠️表記があれば問題あり)
+3. bitbarを起動し、_Plugins Directory_としてIkaStalkerフォルダを指定
+4. メニューバーに`ᔦꙬᔨ-時刻`の表示が出ていれば起動成功(⚠️表記があれば問題あり)
 
+## Author
 
-## 更新履歴
-2017/05/06 0.1.1	readme.md配置変更,readme.md誤記訂正
-2017/05/05 0.1.0	release
+[@4juru](https://twitter.com/4juru)
+
+## License
+
+[MIT](http://b4b4r07.mit-license.org)
