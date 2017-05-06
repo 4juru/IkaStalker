@@ -9,6 +9,9 @@
 * [イカリング](https://splatoon.nintendo.net)にて表示できるフレンドのプレイ状態を取得・表示
 * 更新間隔はデフォルトで１分
 
+## Release
+[こちら](https://github.com/4juru/IkaStalker/releases/latest)からダウンロードできます
+
 ## Installation
 1. bitbarを[アプリ配布元](https://github.com/matryer/bitbar/releases/latest)から入手し、インストールする
 2. session情報はブラウザでログインして、自分で取得する必要あり（わかりにくいので[こちら](lib/getcookie.md)を参照）
