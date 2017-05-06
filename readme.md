@@ -10,7 +10,7 @@
 * 更新間隔はデフォルトで１分
 
 ## Release
-[こちら](https://github.com/4juru/IkaStalker/releases/latest)からダウンロードできます
+[こちら](https://github.com/4juru/IkaStalker/releases/latest)から最新版をダウンロード
 
 ## Installation
 1. bitbarを[アプリ配布元](https://github.com/matryer/bitbar/releases/latest)から入手し、インストールする
