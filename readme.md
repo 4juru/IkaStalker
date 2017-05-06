@@ -1,7 +1,6 @@
 # IkaStalker
-
-イカフレンド監視用ツール
-[bitbar](https://getbitbar.com)のプラグイン
+* イカフレンド監視用ツール
+* [bitbar](https://getbitbar.com)のプラグイン
 
 ![](lib/menu.jpg)
 
