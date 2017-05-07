@@ -10,7 +10,6 @@ load 'lib/stage.image'
 load 'lib/login.txt'
 
 
-
 private
 class String
 	# テキスト変換
@@ -76,14 +75,12 @@ class String
 end
 
 
-
-
 # [URI]
 splapi_uri = "https://splapi.fetus.jp/schedule"
 friends_uri = 'https://splatoon.nintendo.net/friend_list/index.json'
 prof_uri = "https://splatoon.nintendo.net/profile/"
-howto_s_uri = "https://github.com/4juru/IkaStalker/blob/master/lib/getcookie.md"
-howto_h_uri = "https://github.com/4juru/IkaStalker/blob/master/lib/sethttparty.md"
+howto_s_uri = "https://github.com/4juru/IkaStalker/blob/master/doc/getcookie.md"
+howto_h_uri = "https://github.com/4juru/IkaStalker/blob/master/doc/sethttparty.md"
 
 
 # splapiから情報取得
@@ -92,17 +89,17 @@ res_h = (JSON.parse(response.body))["result"]
 
 
 # メニューのアイコン表示
-t=0
-puts 'ᔦꙬᔨ-' + res_h["regular"][t]["end"].hour
+puts 'ᔦꙬᔨ-' + res_h["regular"][0]["end"].hour
 puts '---'
 
 
 # 現在のステージ情報表示
 for mode in ["regular","gachi"] do
-	puts res_h[mode][t]["rule"].rule_view(18)
+	puts res_h[mode][0]["rule"].rule_view(18)
 	for itr in [0,1] do
-		puts res_h[mode][t]["maps"][itr].map_view(20)
-		puts '--'.img_view(res_h[mode][t]["maps_ex"][itr]["statink"])
+		puts res_h[mode][0]["maps"][itr].map_view(20)
+		puts '--' + res_h[mode][0]["maps"][itr].map_view(20)
+		puts '--'.img_view(res_h[mode][0]["maps_ex"][itr]["statink"])
 	end
 end
 

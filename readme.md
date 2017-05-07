@@ -14,7 +14,7 @@
 
 ## Installation
 1. bitbarを[アプリ配布元](https://github.com/matryer/bitbar/releases/latest)から入手し、インストールする
-2. session情報はブラウザでログインして、自分で取得する必要あり（わかりにくいので[こちら](lib/getcookie.md)を参照）
+2. session情報はブラウザでログインして取得しておく（わかりにくいので[こちら](doc/getcookie.md)を参照）
 	1. イカリングにログインして、Cookieに入っている`wag_session`をコピー
 	2. `IkaStalker/lib/login.txt`を編集
 	3. `$wag_sessiond = '〇〇'`の〇〇部分にコピーした`wag_session`を貼り付け（`$wag_sessiond_dummy`を参考に）
