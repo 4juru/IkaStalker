@@ -24,6 +24,7 @@
 
 ## この部分（`test`）にコピーしてきた（`wag_session`）を貼り付けます
 ![](getcookie/img00012.png)
+* ここに`skip`と書けば、フレンド状態・表示をしません
 
 ## ここまでできたら上書き保存
 ![](getcookie/img00013.png)
