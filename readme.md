@@ -2,7 +2,7 @@
 * イカフレンド監視用ツール
 * [bitbar](https://getbitbar.com)のプラグイン
 
-![](lib/menu.jpg)
+![](doc/menu.jpg)
 
 ## Description
 * [splapi](https://splapi.fetus.jp)からステージ情報を取得し表示
