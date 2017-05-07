@@ -1,7 +1,7 @@
 # httpartyインストール方法
 
 * ターミナルを立ち上げて以下のコマンドを入力
-![](lib/terminal.png)
+![](terminal.png)
 ```
 gem install httparty
 ```
