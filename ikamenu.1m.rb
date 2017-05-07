@@ -2,7 +2,6 @@
 $:.unshift File.dirname(__FILE__)
 
 require 'time'
-require 'httparty'
 require 'net/http'
 require 'uri'
 require 'json'
@@ -167,18 +166,39 @@ puts head[t] + '--| image="' + $stage_img[gachi_mapx[t][0]] + '"'
 puts head[t] + gachi_map[t][1] + "| size=20 color=black"
 puts head[t] + '--| image="' + $stage_img[gachi_mapx[t][1]] + '"'
 
+begin
+  require 'httparty'
 
-if $wag_session.size>20
+	if $wag_session!="skip"
+		puts '---'
+		puts 'Friends | size=18'
 
-	puts '---'
-	puts 'Friends | size=18'
+
+		res = HTTParty.get('https://splatoon.nintendo.net/friend_list/index.json', headers: { 'Cookie' => "_wag_session=#{$wag_session}"} )
 
 
-	res = HTTParty.get('https://splatoon.nintendo.net/friend_list/index.json', headers: { 'Cookie' => "_wag_session=#{$wag_session}"} )
 
-	res.sort_by {|h| h['mode'] }.each do |h|
-	  puts mode2char(h['mode']) + "   #{h['mii_name']}" + " | size=20 color=" + mode2color(h['mode'])+ " href=https://splatoon.nintendo.net/profile/#{h['hashed_id']}"
+		if res.success?
+			res.sort_by {|h| h['mode'] }.each do |h|
+			  puts mode2char(h['mode']) + "   #{h['mii_name']}" + " | size=20 color=" + mode2color(h['mode'])+ " href=https://splatoon.nintendo.net/profile/#{h['hashed_id']}"
+			end
+		else
+			case res.code
+			  when 200
+			    puts "All good!"
+			  when 401
+			    puts "wag_sessionが正しくない可能性があります | color=red"
+			    puts "設定方法 | color=blue href=https://github.com/4juru/IkaStalker/blob/master/lib/getcookie.md"
+			  when 404
+			    puts "O noes not found!"
+			  when 500...600
+			    puts "ZOMG ERROR #{response.code}"
+			end
+		end
 	end
 
+rescue LoadError
+	puts "---"
+	puts "httpartyがインストールされていません| color=red"
+	puts "インストール方法 | color=blue href=https://github.com/4juru/IkaStalker/blob/master/lib/sethttparty.md"
 end
-
