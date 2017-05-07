@@ -153,6 +153,6 @@ begin
 rescue LoadError
 	puts "---"
 	puts "httpartyがインストールされていません".opt._color("red")
-	puts "インストール方法"opt._color("blue")._uri(howto_h_uri)
+	puts "インストール方法".opt._color("blue")._uri(howto_h_uri)
 end
 
