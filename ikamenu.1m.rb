@@ -64,11 +64,11 @@ class String
 	end
 
 	# 情報表示用メソッド
-	def rule_view
-		self.to_s.opt._size(16)._color(self.to_s.rule_to_color)
+	def rule_view(size)
+		self.to_s.opt._size(size)._color(self.to_s.rule_to_color)
 	end
-	def map_view
-		self.to_s.opt._size(20)._color("black")
+	def map_view(size)
+		self.to_s.opt._size(size)._color("black")
 	end
 	def img_view(img)
 		self.to_s.opt._img($stage_img[ img ])
@@ -99,9 +99,9 @@ puts '---'
 
 # 現在のステージ情報表示
 for mode in ["regular","gachi"] do
-	puts res_h[mode][t]["rule"].rule_view
+	puts res_h[mode][t]["rule"].rule_view(18)
 	for itr in [0,1] do
-		puts res_h[mode][t]["maps"][itr].map_view
+		puts res_h[mode][t]["maps"][itr].map_view(20)
 		puts '--'.img_view(res_h[mode][t]["maps_ex"][itr]["statink"])
 	end
 end
@@ -114,11 +114,12 @@ puts '次のステージ'.opt._size(18)
 for t in [1,2] do
 	puts res_h["regular"][t]["start"].hour + "-" + res_h["regular"][t]["end"].hour.opt._size(18)
 	for mode in ["regular","gachi"] do
-		puts '--' + res_h[mode][t]["rule"].rule_view
+		puts '--' + res_h[mode][t]["rule"].rule_view(24)
 		for itr in [0,1] do
-			puts '--' + res_h[mode][t]["maps"][itr].map_view
+			puts '--' + res_h[mode][t]["maps"][itr].map_view(20)
 			puts '--'.img_view(res_h[mode][t]["maps_ex"][itr]["statink"])
 		end
+		puts '-----'
 	end
 end
 
