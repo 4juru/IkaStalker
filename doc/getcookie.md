@@ -19,14 +19,14 @@
 ![](getcookie/img00009.png)
 ![](getcookie/img00010.png)
 
-## `lib/login.txt`を編集します
-![](getcookie/img00011.png)
+## `lib/app/login.txt`を編集します
+![](getcookie/img00014.png)
 
-## この部分（`test`）にコピーしてきた（`wag_session`）を貼り付けます
-![](getcookie/img00012.png)
+## この部分（`skip`）にコピーしてきた（`wag_session`）を貼り付けます
+![](getcookie/img00015.png)
 * ここに`skip`と書けば、フレンド状態・表示をしません
 
 ## ここまでできたら上書き保存
-![](getcookie/img00013.png)
+![](getcookie/img00016.png)
 
 ## おしまい
