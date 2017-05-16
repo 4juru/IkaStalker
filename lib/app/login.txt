@@ -1,1 +1,1 @@
-$wag_session = ‘skip’
+$wag_session = "skip"
